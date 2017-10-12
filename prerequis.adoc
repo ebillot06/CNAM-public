@@ -1,0 +1,75 @@
+= CNAM
+
+== Materiel
+Lenovo thinkpad T430S ... merci Philippe !
+
+Batterie faible => extender ... merci Vincent
+
+mdps BIOS pr kvm ? ... merci JLL ! +
+
+wifi bouton ... merci Eric !
+
+== OS
+Ubuntu 16.04 LTS ... merci Fab !
+
+TIP: OS version vieille, upgrade a posteriori si besoin
+
+mdps root OK user OK
+
+bashrc pour spark
+
+== Softs
+* install APT (apt-get install <nom_paquet>): +
+	screen OK +
+	virtualbox OK +
+	docker OK +
+	git OK +
+	synaptic OK +
+	python matplotlib OK +
+	chrome +
+	    => acces bookmark +
+	    => acces gitlab pr code +
+	mysql workbench OK +
+	mongodb-clients OK +
+	apache2 OK +
+
+* Install tuto CNAM: (cf url CNAM) +
+	java 8 par ppa OK +
+	scala 11 OK +
+
+* download et install dans /opt: (a chercher ds google) +
+	spark OK conf OK +
+	cloudera quickstart image pour virtualbox OK conf VB TODO
+    rockmongo (https://rexadrivan.wordpress.com/2017/04/19/how-to-install-rockmongo-on-ubuntu-16/)
+
+* custom install dans /opt
+    pycharm OK +
+	intelliJ OK conf TODO +
+
+* outils pour resumer les cours
+plantUML
+    pas de GUI
+astah
+    fichier binaire ferme
+draw.io
+   fichier binaire ferme
+
+TIP: freemind
+
+== "Cloud"
+* gitlab (www.gitlab.com)
+    clé SSH OK +
+    git config --user et --email OK +
+
+* github
+    draw.io
+
+* slack ((www.slack.com) +
+merci Remy !
+
+* connections +
+merci JLL !
+
+TIP: publier doc TODO
+
+* pguest PROBTP
