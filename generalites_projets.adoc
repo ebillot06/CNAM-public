@@ -1,8 +1,24 @@
-fabien : www.sirene.fr, entreprises qui vont fermer, predictif
-eric : OK firewall ou revProxy
-fred : en cours
-emeric :KO, bornes mobiles rechargement
+= PROJETS
 
-prj :
+== Besoin
+
+=== intro
+Un projet par UE +
+Un projet global
+
+=== projet STA211
+explication de la demarche
+etude de cas
 plan 1 methode
 2 etude de cas
+
+=== projet RCP216
+
+=== projet NFE204
+
+== Pistes
+* fabien : www.sirene.fr, entreprises qui vont fermer, predictif
+* eric : OK firewall ou revProxy
+* fred, expert data science : en cours par mail
+* emeric :KO, bornes mobiles rechargement
+
