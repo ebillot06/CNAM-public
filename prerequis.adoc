@@ -32,6 +32,9 @@ bashrc pour spark
 	mysql workbench OK +
 	mongodb-clients OK +
 	apache2 OK +
+	jupyter +
+	weka +
+	freeplane
 
 * Install tuto CNAM: (cf url CNAM) +
 	java 8 par ppa OK +
