@@ -1,24 +1,35 @@
-= Bibliographie
+= Web/Bibliographie
 
-== Big Data (général)
+== STA211
+
+=== Séance 2
+Bouroche saporta PUF "l analyse des donnees"
+
+Tenenhaus Dunod "Statistique : methodes pour decrire"
+
+www.agro-montpellier.fr/cnam-lr/statnet
+
+== PERSO
+
+=== Big Data (général)
 "Analyse de données et Big data" - HS GLMF n°78
 
 TIP: Survol interessant de HDFS a HBASE en passant par spark et Machine learning
 
-== Hadoop
+=== Hadoop
 "Hadoop - Devenez opérationnel dans le monde du big data" - J.Chokogoue - ENI
 
 TIP: leger sur la partie securité, un peu haut niveau, partie storm pas encore lue
 
-== Data science
+=== Data science
 "Data science par la pratique" - Joel Grus - Eyrolles
 
 TIP: moins complet qu un cours de chercheur mais infiniment plus pedagogique - code en python
 
-== Python
+=== Python
 " programmer avec Python 3" - G Swinnen - Eyrolles
 
-== Mathématiques
+=== Mathématiques
 " Précis de mathématiques" - Belin
 
 TIP: vieux et tres théorique : je ne recommande pas
