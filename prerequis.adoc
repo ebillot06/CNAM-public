@@ -1,28 +1,25 @@
 = CNAM
 
 == Materiel
+[%hardbreaks]
 Lenovo thinkpad T430S ... merci Philippe !
-
-Batterie faible => extender ... merci Vincent
-
-mdps BIOS pr kvm ? ... merci JLL ! +
-
+Batterie faible => extender ... merci Vincent !
+mdps BIOS pr kvm ? ... merci JLL !
 wifi bouton ... merci Eric !
 
 == OS
+[%hardbreaks]
 Ubuntu 16.04 LTS ... merci Fab !
-
-TIP: OS version vieille, upgrade a posteriori si besoin
-
+TIP: OS version vieille
+upgrade a posteriori pour freeplane => 17.04
 mdps root OK user OK
-
 bashrc pour spark
 
 == Softs
 * install APT (apt-get install <nom_paquet>): +
 	screen OK +
 	virtualbox OK +
-	docker OK +
+	docker OK maj apres upgrade TODO +
 	git OK +
 	synaptic OK +
 	python matplotlib OK +
@@ -34,7 +31,8 @@ bashrc pour spark
 	apache2 OK +
 	jupyter +
 	weka +
-	freeplane
+	freeplane +
+	r-base
 
 * Install tuto CNAM: (cf url CNAM) +
 	java 8 par ppa OK +
@@ -56,8 +54,21 @@ astah
     fichier binaire ferme
 draw.io
    fichier binaire ferme
+freeplane
+    fichier xml, libre
 
-TIP: freemind
+=== factominer
+cf http://factominer.free.fr/install.html
+
+pb :
+configure: Need to download and build NLopt
+trying URL 'http://ab-initio.mit.edu/nlopt/nlopt-2.4.2.tar.gz'
+Error in download.file(url = "http://ab-initio.mit.edu/nlopt/nlopt-2.4.2.tar.gz",  :
+  cannot open URL 'http://ab-initio.mit.edu/nlopt/nlopt-2.4.2.tar.gz'
+Execution halted
+
+sol :
+install libnlopt-dev libnlopt0 et r-cran-nloptr
 
 == "Cloud"
 * gitlab (www.gitlab.com)
