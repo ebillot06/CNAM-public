@@ -1,9 +1,11 @@
 # CNAM-public
 
-Ressources communes pour la formation certifiante en big data du CNAM
+Ressources publiques communes pour la formation certifiante en big data du CNAM
 
 * Bibliographie
 
-* pre requis
+* Pre requis materiels et logiciels
+
+* Code utilitaire ou exercices
 
 * ...
