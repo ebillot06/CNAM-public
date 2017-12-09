@@ -1,4 +1,9 @@
-# csv..py <restaurants.csv> <inspections.csv>
+# python csv2json_restaurant.py <restaurants.csv> <inspections.csv>
+#
+# *ATTENTION*
+# 1) l ordre dans le user type cassandra doit "coller" à l ordre dans l objet JSON, non granti par le dict python
+# 2) l'algo est tres tres criticable, temps d execution ~10h..............
+
 import csv
 import json
 import sys
@@ -8,13 +13,6 @@ number_args = len(sys.argv)
 if number_args != 3 :
     print("Error in in arguments !")
     exit(1)
-# print ('Number of arguments:', len(sys.argv), 'arguments.')
-# i= 0
-# while i <  len(sys.argv) :
-#     print ( str(i) + " " + sys.argv[i])
-#     i=i+1
-# print ('Argument List:', str(sys.argv))
-# exit(0)
 
 try:
     resto_file = open(sys.argv[1], 'r')
@@ -22,15 +20,12 @@ try:
     resto_fieldnames = ("id", "Name", "borough", "BuildingNum", "Street", "ZipCode","Phone","CuisineType" )
     resto_reader = csv.DictReader(resto_file, resto_fieldnames)
     inspection_fieldnames = ( "idrestau", "date", "ViolationCode", "ViolationDescription", "CriticalFlag", "Score", "GRADE")
-    j = 0
     for resto_row in resto_reader :
         inspection_file = open(sys.argv[2], 'r')
         inspection_reader = csv.DictReader(inspection_file, inspection_fieldnames)
         inspections_dict = {}
         #generer les inspections correspondantes au restau
         for inspection_row in inspection_reader :
-            ##print( "idrestau <" + inspection_row["idrestau"] +  "> id <" + resto_row["id"] +">" )
-            ##time.sleep(1)
             if inspection_row["idrestau"] == resto_row["id"] :
                 # nettoyer l inspection
                 inspection_row_tmp = inspection_row
