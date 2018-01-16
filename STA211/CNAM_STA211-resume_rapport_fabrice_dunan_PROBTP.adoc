@@ -1,0 +1,126 @@
+= Résumé du rapport de projet CNAM-STA211 - Etude de journaux firewall PROBTP
+:toc: macro
+//:toc:
+:toc-title: table des matières
+:doctype: article
+:pdf-page-size: A4
+:hardbreaks:
+:imagesdir: images
+:homepage: https://gitlab.com/logrus_fr/CNAM-projets/
+:author: Fabrice DUNAN <fabrice.dunan@laposte.net> Eric BILLOT
+:version: v0.1, 2018-01-015
+:showtitle:
+:abstract:
+:description: Rapport {title} {homepage} {author} {version}
+:sectnums:
+:lang: fr
+
+//image:influxDB.png[]
+
+{homepage}
+{author}
+{version}
+
+tuteur:N.Dieye
+
+'''
+toc::[]
+//https://github.com/asciidoctor/asciidoctor-pdf/issues/233
+
+
+== Les données
+
+L'objet de ce document est de présenter notre futur rapport d'étude de cas STA211, visant à l obtention du certificat de données massives du CNAM.
+Ce rapport présentera l'étude des données du firewall PROBTP, plus particulierement les journaux ou logs des de l'execution des regles.
+
+journal activite reseau à destination rev proxy (HTTP) captures sur les firewall
+fonctionnellement acces a une application web PROBTP
+
+* internautes + WS
+* VPN (Cime+autres)
+* routeurs parteanires
+
+=== Les variables
+Date;Time;Description;Interface Name;Interface Direction;Interface;Action;Destination;Origin;Policy Date;Policy Management;Policy Name;Blade;Product Family;Protocol;Rule;Rule UID;Source Port;Destination Port;Service Name;Session ID;Source;Source Machine Name;Source User Name;Type;User;Inzone;Out-Zone;Service ID;ICMP;ICMP Code;ICMP Type;NAT Additional Rule Number;NAT Rule Number;Rule Name;XlateDPort;XlateDst;XlateSport;XlateSrc;TCP packet out of state;TCP Flags;Community;Encryption Methods;VPN Peer Gateway;Encryption Scheme;Session UID;VPN Feature;
+
+variables
+    FROM DEST quel_fw action_fw timestamp
+
+
+=== Une ligne
+20-oct-17;16:32:05;Accepted on rule 289;eth2.806;inbound;eth2.806  inbound;Accept;192.168.106.101 (carpi_extranet);CACPOIR1;Yesterday      15:30:03;admfwngx;PROBTP;Firewall;Network;6 (TCP);289;{ACB8A1CA-CB1E-405A-B497-8CC5E7AC7085};54254;80;http;d36e6c85;172.16.0.219 (m53506.dwprobtp.probtp);m53506@dwprobtp.probtp;LUQUE NADEGE (PB01162) ;Log;LUQUE NADEGE (PB01162) ;;;;;;;;;;;;;;;;;;;;;
+
+=== volume 
+
+==== recuperation echantillon
+* observation
+** vendredi 20/10/2017 14h21 à 16h32
+** 34 Mo fichier
+** extrapolation : 200Mo / jour
+*** calcul a expliciter
+** effectif indiv total 100000
+
+
+== Objectif
+
+objectif ? évolutif en fonction de la progression
+application
+
+conclusion pas forcement positive
+ouverture de pistes
+
+
+données => a quoi pourraietn elle repondre (inverse qu un cas reel)
+
+trouver des groupes geographiques /regles
+regles trss sollicitees a reorg vers le haut
+
+besoin/donne
+IPS ?detection intrusion (SIEM) ou tirer des infos , modele ?
+comportemt atypique
+croiser rv proxy ? attaques
+geoloc des IP source/(pas dest)
+
+== explication de la demarche
+
+etude de cas : methode
+
+impose : comparer l execution de 2 methodes sur les mm donnees
+sur le mm but
+
+
+== retraitement à prevoir
+* timestamp
+* suppression colonnes univaleurs
+* port et service name : cas ICMP
+
+== questions
+* pourquoi pas adresse source publique ?
+* capturer 4x7j ?
+* commencer l unidimensionnel ?
+* schema archi ?
+* desc materiel precis ?
+* elargir a tout le flux ?
+* taille paquets ?
+
+== PROBLEME
+que qualitatif
+
+== Plan prévisionnel détaillé
+
+plan cf slide cours
+
+. introduction
+. pre traitement
+.. preparation des donnees
+.. exploration unidimensionnelle
+.. exploration bidimensionnelle
+.. exploration multidimensionnelle
+... ACP, ACM ?
+. traitement
+.. arbre
+.. bagging
+.. forets aleatoire
+. comparaison auteurs
+. annexe 
+.. code
